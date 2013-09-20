@@ -30,6 +30,7 @@ default.elasticsearch['plugins']['elasticsearch/elasticsearch-cloud-aws']['versi
 # You may choose to configure them in your node configuration instead.
 #
 default.elasticsearch[:gateway][:type]               = ( aws['gateway']['type']                rescue nil )
+default.elasticsearch[:gateway][:s3][:bucket]        = ( aws['gateway']['s3']['bucket']               rescue nil )
 default.elasticsearch[:discovery][:type]             = ( aws['discovery']['type']              rescue nil )
 default.elasticsearch[:discovery][:ec2][:groups]     = ( aws['discovery']['ec2']['groups']     rescue nil )
 default.elasticsearch[:discovery][:ec2][:tag]        = ( aws['discovery']['ec2']['tag']        rescue {} )
